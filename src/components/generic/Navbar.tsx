@@ -10,11 +10,21 @@ export default function Navbar() {
           <Logo height={60} width={200} />
         </div>
         <div className=" flex items-center gap-4">
-          <p>Home</p>
-          <p>About</p>
-          <p>Work Ex</p>
-          <p>Projects</p>
-          <p>Contact</p>
+          <p className="font-medium text-neutral-900 dark:text-neutral-50">
+            Home
+          </p>
+          <p className="font-medium text-neutral-900 dark:text-neutral-50">
+            About
+          </p>
+          <p className="font-medium text-neutral-900 dark:text-neutral-50">
+            Work Ex
+          </p>
+          <p className="font-medium text-neutral-900 dark:text-neutral-50">
+            Projects
+          </p>
+          <p className="font-medium text-neutral-900 dark:text-neutral-50">
+            Contact
+          </p>
         </div>
       </div>
       <DarkModeToggle />

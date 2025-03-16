@@ -4,11 +4,13 @@
     --color-theme-dark: #121A21;
 }
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 html {
     font-family: var(--font-ptSans);
-    @apply text-neutral-900 bg-neutral-50;
+    @apply  bg-neutral-50;
 }
 
 .dark {
-    @apply bg-theme-dark text-neutral-50;
+    @apply bg-theme-dark;
 }
