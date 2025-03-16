@@ -1,30 +1,7 @@
-import { useState, useEffect } from "react";
+import { useTheme } from "@/context/ThemeContext";
 
 const DarkModeToggle = ({ className = "w-10 h-10" }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(function getTheme() {
-    setIsMounted(true);
-    // Get theme from localStorage
-    const theme = localStorage.getItem("theme") || "dark";
-    setIsDarkMode(theme === "dark");
-    document.documentElement.classList.toggle("dark", theme === "dark");
-  }, []);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode((pv) => {
-      const newMode = !pv;
-      document.documentElement.classList.toggle("dark", newMode);
-      localStorage.setItem("theme", newMode ? "dark" : "light");
-      return newMode;
-    });
-  };
-
-  // Don't render anything until mounted to avoid hydration mismatch
-  if (!isMounted) {
-    return null;
-  }
+  const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
     <button

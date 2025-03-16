@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/generic/Navbar";
 import { PT_Sans } from "next/font/google";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
   title: `Software Engineer | Sahil | ${new Date().getFullYear()}`,
@@ -70,9 +71,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${ptSans.variable}`}>
-      <body className="mx-auto my-5 max-w-4xl xl:max-w-5xl  bg-[#121A21]">
-        <Navbar />
-        {children}
+      <body className="mx-auto my-5 max-w-4xl xl:max-w-5xl">
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

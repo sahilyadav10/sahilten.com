@@ -7,7 +7,7 @@ export default function Navbar() {
     <div className="flex items-center justify-between py-3 px-4 border-b">
       <div className="flex items-center gap-20">
         <div className="flex items-center ">
-          <Logo isDarkMode height={60} width={200} />
+          <Logo height={60} width={200} />
         </div>
         <div className=" flex items-center gap-4">
           <p>Home</p>

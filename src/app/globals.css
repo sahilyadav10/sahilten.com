@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
+@theme {
+    --color-theme-dark: #121A21;
+}
 
 html {
     font-family: var(--font-ptSans);
-    color: #fff;
+    @apply text-neutral-900 bg-neutral-50;
+}
+
+.dark {
+    @apply bg-theme-dark text-neutral-50;
 }

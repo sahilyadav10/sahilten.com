@@ -1,12 +1,14 @@
+"use client";
+import { useTheme } from "@/context/ThemeContext";
+
 const Logo = ({
   width = 200,
   height = 60,
-  isDarkMode,
 }: {
   width?: number;
   height?: number;
-  isDarkMode: boolean;
 }) => {
+  const { isDarkMode } = useTheme();
   return (
     <svg
       width={width}
