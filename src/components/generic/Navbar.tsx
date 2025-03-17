@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import DarkModeToggle from "./DarkModeToggle";
-import Logo from "../icons/Logo";
+import Logo from "@/components/icons/Logo";
 import HamburgerMenu from "./HamburgerMenu";
 
 const navItems = [
