@@ -8,8 +8,11 @@ export default function WorkEx() {
   return (
     <Section title="Work Ex" withSpacing className="relative">
       {workEx.map((experience, index) => (
-        <div key={index} className="flex pb-10 ml-4 last:pb-0">
-          <div className="-z-1 absolute left-[52px] top-20 h-[78%] w-[1px] bg-neutral-600" />
+        <div
+          key={index}
+          className="flex pb-10 ml-0 md:ml-4 last:pb-0 last:bg-neutral-50 dark:last:bg-theme-dark"
+        >
+          <div className="-z-1 absolute left-[36px] md:left-[52px] top-20 h-[90%] w-[1px] bg-neutral-600" />
           <div className="flex gap-2 items-start">
             <div className="min-w-10 h-10 overflow-clip flex items-center justify-center bg-neutral-100 border-2 border-neutral-700 rounded-full">
               {experience?.logo ? (
@@ -33,39 +36,37 @@ export default function WorkEx() {
               <p className="text-neutral-600 dark:text-neutral-400 text-sm">
                 {experience.jobTitle}, {experience.duration}
               </p>
-              <div>
-                <ul>
-                  {experience.accomplishment.map((accomplishment, index) => {
-                    if (Array.isArray(accomplishment)) {
-                      return (
-                        <div className="flex gap-2" key={index}>
-                          <HiChevronDoubleRight className="text-neutral-500 mt-[5px] min-w-10" />
-                          <li className="text-wrap text-neutral-900 dark:text-neutral-50">
-                            {accomplishment.map((item, i) => (
-                              <span
-                                key={`${index}-${i}`}
-                                className={
-                                  item?.isHightlight ? "text-primary" : ""
-                                }
-                              >
-                                {item.text}
-                              </span>
-                            ))}
-                          </li>
-                        </div>
-                      );
-                    }
+              <ul>
+                {experience.accomplishment.map((accomplishment, index) => {
+                  if (Array.isArray(accomplishment)) {
                     return (
                       <div className="flex gap-2" key={index}>
                         <HiChevronDoubleRight className="text-neutral-500 mt-[5px] min-w-10" />
-                        <li className="text-neutral-900 dark:text-neutral-50">
-                          {accomplishment}
+                        <li className="text-wrap text-neutral-900 dark:text-neutral-50">
+                          {accomplishment.map((item, i) => (
+                            <span
+                              key={`${index}-${i}`}
+                              className={
+                                item?.isHightlight ? "text-primary" : ""
+                              }
+                            >
+                              {item.text}
+                            </span>
+                          ))}
                         </li>
                       </div>
                     );
-                  })}
-                </ul>
-              </div>
+                  }
+                  return (
+                    <div className="flex gap-2" key={index}>
+                      <HiChevronDoubleRight className="text-neutral-500 mt-[5px] min-w-10" />
+                      <li className="text-neutral-900 dark:text-neutral-50">
+                        {accomplishment}
+                      </li>
+                    </div>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>

@@ -14,7 +14,7 @@ export default function Projects() {
             src: "/resto.webp",
             alt: "Resto app screenshot",
           }}
-          className="basis-1/3"
+          className="basis-1/2 md:basis-1/3"
           href={"https://github.com/sahilyadav10/resto"}
         />
         <Card
@@ -25,7 +25,7 @@ export default function Projects() {
             src: "/quackpolls.webp",
             alt: "Resto app screenshot",
           }}
-          className="basis-1/3"
+          className="basis-1/2 md:basis-1/3"
           href={"https://github.com/sahilyadav10/quackpolls"}
         />
       </div>
