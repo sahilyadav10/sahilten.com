@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 
 import Card from "@/components/generic/Card";
+import Button from "@/components/generic/Button";
 import moi from "../../../public/moi.png";
 
 export default function Home() {
@@ -25,9 +27,7 @@ export default function Home() {
               digital experiences (since 2020)
             </p>
           </div>
-          <button className="bg-primary text-neutral-50 rounded-2xl py-3 w-full cursor-pointer hover:opacity-90">
-            View Resume
-          </button>
+          <Button>View Resume</Button>
         </div>
       </div>
       <div className="flex justify-center items-center">

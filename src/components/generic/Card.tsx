@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Button from "@/components/generic/Button";
+import { HiArrowRight } from "react-icons/hi";
 
 type CardVariant = "stat" | "content";
 type CardProps = {
@@ -15,7 +17,7 @@ type CardProps = {
 
 const variantStyles = {
   stat: "bg-neutral-50 border border-neutral-200",
-  content: "bg-transparent",
+  content: "bg-neutral-50 shadow-lg",
 };
 
 export default function Card({
@@ -34,20 +36,20 @@ export default function Card({
 
   return (
     <div
-      className={`rounded-2xl flex flex-col ${variantStyles[variant]} ${
-        href ? "transition-transform hover:opacity-90 cursor-pointer" : ""
+      className={`group rounded-2xl flex flex-col ${variantStyles[variant]} ${
+        href ? "cursor-pointer" : ""
       } ${className}`}
       onClick={href ? handleClick : undefined}
       role={href ? "link" : undefined}
       tabIndex={href ? 0 : undefined}
     >
       {image && (
-        <div className="w-full h-48 relative mb-2">
+        <div className="w-full h-48 relative overflow-hidden rounded-t-2xl">
           <Image
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover rounded-2xl"
+            className="object-cover transition-transform duration-500 group-hover:scale-120"
           />
         </div>
       )}
@@ -58,15 +60,14 @@ export default function Card({
           {subheading && <span className="text-neutral-500">{subheading}</span>}
         </div>
       ) : (
-        <div className="flex flex-col">
-          <h3 className="font-semibold text-neutral-900 dark:text-neutral-50">
-            {heading}
-          </h3>
+        <div className="pt-2 flex flex-col px-4 pb-4 hover:border-x hover:border-b hover:border-primary hover:rounded-b-2xl hover:border-t-none">
+          <h3 className="font-semibold text-neutral-900">{heading}</h3>
           {subheading && (
-            <p className="text-neutral-600 text-sm dark:text-neutral-400">
-              {subheading}
-            </p>
+            <p className="text-neutral-600 text-sm">{subheading}</p>
           )}
+          <Button className="justify-center mt-3" size="sm">
+            View <HiArrowRight />
+          </Button>
         </div>
       )}
     </div>
