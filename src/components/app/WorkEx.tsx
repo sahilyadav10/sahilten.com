@@ -8,7 +8,7 @@ export default function WorkEx() {
   return (
     <Section title="Work Ex" withSpacing className="relative">
       {workEx.map((experience, index) => (
-        <div key={index} className="flex pb-10 ml-4">
+        <div key={index} className="flex pb-10 ml-4 last:pb-0">
           <div className="-z-1 absolute left-[52px] top-20 h-[78%] w-[1px] bg-neutral-600" />
           <div className="flex gap-2 items-start">
             <div className="min-w-10 h-10 overflow-clip flex items-center justify-center bg-neutral-100 border-2 border-neutral-700 rounded-full">

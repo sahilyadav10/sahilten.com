@@ -7,14 +7,14 @@ export default function Home() {
   return (
     <div className="p-4 my-10 flex flex-col gap-6">
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="md:flex-1/2">
+        <div className="md:basis-1/2">
           <Image
             src={moi}
             alt="A picture of Sahil Yadav"
-            className="rounded-xl"
+            className="rounded-2xl"
           />
         </div>
-        <div className="flex-1/2 flex items-start flex-col justify-center gap-6">
+        <div className="basis-1/2 flex items-start flex-col justify-center gap-6">
           <div className="flex items-start flex-col justify-center gap-2">
             {" "}
             <h1 className="text-4xl font-extrabold text-neutral-900 dark:text-neutral-50">
@@ -25,7 +25,7 @@ export default function Home() {
               digital experiences (since 2020)
             </p>
           </div>
-          <button className="bg-[#8C52FF] text-neutral-50 rounded-xl py-3 w-full cursor-pointer hover:opacity-90">
+          <button className="bg-primary text-neutral-50 rounded-2xl py-3 w-full cursor-pointer hover:opacity-90">
             View Resume
           </button>
         </div>

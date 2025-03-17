@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 type CardVariant = "stat" | "content";
-
 type CardProps = {
   heading: string;
   subheading?: string;
@@ -11,6 +10,7 @@ type CardProps = {
   };
   variant: CardVariant;
   className?: string;
+  href?: string;
 };
 
 const variantStyles = {
@@ -24,18 +24,30 @@ export default function Card({
   image,
   variant = "content",
   className = "",
+  href,
 }: CardProps) {
+  const handleClick = () => {
+    if (href) {
+      window.open(href, "_blank", "noopener,noreferrer");
+    }
+  };
+
   return (
     <div
-      className={`rounded-lg flex flex-col ${variantStyles[variant]} ${className}`}
+      className={`rounded-2xl flex flex-col ${variantStyles[variant]} ${
+        href ? "transition-transform hover:opacity-90 cursor-pointer" : ""
+      } ${className}`}
+      onClick={href ? handleClick : undefined}
+      role={href ? "link" : undefined}
+      tabIndex={href ? 0 : undefined}
     >
       {image && (
-        <div className="w-full h-48 relative mb-4">
+        <div className="w-full h-48 relative mb-2">
           <Image
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover rounded-lg"
+            className="object-cover rounded-2xl"
           />
         </div>
       )}
@@ -47,11 +59,11 @@ export default function Card({
         </div>
       ) : (
         <div className="flex flex-col">
-          <h3 className="text-xl font-semibold text-neutral-900 dark:text-neutral-50">
+          <h3 className="font-semibold text-neutral-900 dark:text-neutral-50">
             {heading}
           </h3>
           {subheading && (
-            <p className="text-neutral-600 dark:text-neutral-400 mt-1">
+            <p className="text-neutral-600 text-sm dark:text-neutral-400">
               {subheading}
             </p>
           )}

@@ -1,4 +1,3 @@
-import React from "react";
 import Pill from "@/components/generic/Pill";
 import Section from "@/components/generic/Section";
 
@@ -21,17 +20,17 @@ const AWS_SKILLS = [
 export default function Skills() {
   return (
     <Section title="Skills" withSpacing>
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex gap-3 flex-wrap">
         {FRONTEND_SKILLS.map((skill) => (
           <Pill key={skill}>{skill}</Pill>
         ))}
       </div>
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex gap-3 flex-wrap">
         {BACKEND_SKILLS.map((skill) => (
           <Pill key={skill}>{skill}</Pill>
         ))}
       </div>
-      <div className="flex gap-2 flex-wrap">
+      <div className="flex gap-3 flex-wrap">
         {AWS_SKILLS.map((skill) => (
           <Pill key={skill}>{skill}</Pill>
         ))}
