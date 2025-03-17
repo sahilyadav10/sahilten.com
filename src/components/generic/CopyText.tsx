@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { MouseEvent, useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { MdOutlineCopyAll } from "react-icons/md";
 
@@ -17,7 +17,8 @@ export default function CopyText({ text, className }: CopyTextProps) {
     }
   };
 
-  const handleCopy = async () => {
+  const handleCopy = async (event: MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
     try {
       await copyToClipboard(text);
       setCopied(true);
@@ -35,8 +36,9 @@ export default function CopyText({ text, className }: CopyTextProps) {
         {text}
       </p>
       <button
+        data-copy="true"
         onClick={handleCopy}
-        className="text-neutral-900 dark:text-neutral-50 hover:cursor-pointer rounded-lg transition-colors"
+        className="text-neutral-900 dark:text-neutral-50 hover:cursor-pointer rounded-lg transition-colors p-1"
       >
         {copied ? (
           <FaCheck size={16} className="text-primary" />

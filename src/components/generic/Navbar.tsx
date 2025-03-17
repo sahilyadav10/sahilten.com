@@ -15,6 +15,29 @@ const navItems = [
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+
+    // If it's the home link with no hash, just scroll to top
+    if (href === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    // Extract the id from href
+    const id = href.split("#")[1];
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      // Update URL without triggering scroll
+      window.history.pushState({}, "", href);
+    }
+  };
+
   return (
     <div className="relative">
       <div className="flex items-center justify-between py-3 px-4 border-b">
@@ -28,7 +51,10 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
+                onClick={(e) => handleNavClick(e, item.href)}
                 className="font-medium text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
+                role="button"
+                tabIndex={0}
               >
                 {item.label}
               </a>
@@ -58,7 +84,12 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 className="font-medium text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, item.href);
+                  setIsMobileMenuOpen(false);
+                }}
+                role="button"
+                tabIndex={0}
               >
                 {item.label}
               </a>
