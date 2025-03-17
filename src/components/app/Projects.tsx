@@ -5,7 +5,7 @@ import Card from "../generic/Card";
 export default function Projects() {
   return (
     <Section title="Projects" withSpacing>
-      <div className="flex gap-3 justify-start">
+      <div className="flex gap-3 justify-start flex-wrap sm:flex-nowrap">
         <Card
           heading="Resto"
           subheading="Resto is a powerful app for discovering, managing, and rating restaurants. Add, edit, and review dining spots effortlessly—all in one place! 🍽️"
@@ -14,7 +14,7 @@ export default function Projects() {
             src: "/resto.webp",
             alt: "Resto app screenshot",
           }}
-          className="basis-1/2 md:basis-1/3"
+          className="sm:basis-1/2 md:basis-1/3"
           href={"https://github.com/sahilyadav10/resto"}
         />
         <Card
@@ -25,7 +25,7 @@ export default function Projects() {
             src: "/quackpolls.webp",
             alt: "Resto app screenshot",
           }}
-          className="basis-1/2 md:basis-1/3"
+          className="sm:basis-1/2 md:basis-1/3"
           href={"https://github.com/sahilyadav10/quackpolls"}
         />
       </div>

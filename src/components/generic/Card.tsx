@@ -44,7 +44,7 @@ export default function Card({
       tabIndex={href ? 0 : undefined}
     >
       {image && (
-        <div className="w-full h-48 relative overflow-hidden rounded-t-2xl">
+        <div className="w-full h-48 min-h-48 relative overflow-hidden rounded-t-2xl">
           <Image
             src={image.src}
             alt={image.alt}
@@ -60,12 +60,14 @@ export default function Card({
           {subheading && <span className="text-neutral-500">{subheading}</span>}
         </div>
       ) : (
-        <div className="pt-2 flex flex-col px-4 pb-4 hover:border-x hover:border-b hover:border-primary hover:rounded-b-2xl hover:border-t-none">
-          <h3 className="font-semibold text-neutral-900">{heading}</h3>
-          {subheading && (
-            <p className="text-neutral-600 text-sm">{subheading}</p>
-          )}
-          <Button className="justify-center mt-3" size="sm">
+        <div className="pt-2 h-full flex gap-2 flex-col justify-between px-4 pb-4 hover:border-x hover:border-b hover:border-primary hover:rounded-b-2xl hover:border-t-none">
+          <div>
+            <h3 className="font-semibold text-neutral-900">{heading}</h3>
+            {subheading && (
+              <p className="text-neutral-600 text-sm">{subheading}</p>
+            )}
+          </div>
+          <Button className="justify-center" size="sm">
             View <HiArrowRight />
           </Button>
         </div>

@@ -7,7 +7,7 @@ export default function Socials() {
   return (
     <Section title="Socials" withSpacing>
       <div className="flex flex-col md:flex-row gap-3">
-        <div className="basis-1/3 max-w-[32%] p-4 border border-neutral-200 rounded-2xl">
+        <div className="basis-1/3 md:max-w-[32%] p-4 border border-neutral-200 rounded-2xl">
           <FaLinkedin
             size={30}
             className="text-neutral-900 dark:text-neutral-50"
@@ -19,7 +19,7 @@ export default function Socials() {
             <CopyText text="https://www.linkedin.com/in/sahilyadav10" />
           </div>
         </div>
-        <div className="basis-1/3 max-w-[32%] p-4 border border-neutral-200 rounded-2xl">
+        <div className="basis-1/3 md:max-w-[32%] p-4 border border-neutral-200 rounded-2xl">
           <FaGithub
             size={30}
             className="text-neutral-900 dark:text-neutral-50"
@@ -31,7 +31,7 @@ export default function Socials() {
             <CopyText text="https://github.com/sahilyadav10" />
           </div>
         </div>
-        <div className="basis-1/3 p-4 border border-neutral-200 rounded-2xl">
+        <div className="basis-1/3 md:max-w-[32%] p-4 border border-neutral-200 rounded-2xl">
           <FaEnvelope
             size={30}
             className="text-neutral-900 dark:text-neutral-50"
