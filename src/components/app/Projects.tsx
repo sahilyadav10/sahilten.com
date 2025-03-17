@@ -4,7 +4,7 @@ import Card from "../generic/Card";
 
 export default function Projects() {
   return (
-    <Section title="Projects" withSpacing>
+    <Section id="projects" title="Projects" withSpacing>
       <div className="flex gap-3 justify-start flex-wrap sm:flex-nowrap">
         <Card
           heading="Resto"

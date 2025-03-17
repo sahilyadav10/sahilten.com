@@ -19,7 +19,7 @@ const AWS_SKILLS = [
 
 export default function Skills() {
   return (
-    <Section title="Skills" withSpacing>
+    <Section id="skills" title="Skills" withSpacing>
       <div className="flex gap-3 flex-wrap">
         {FRONTEND_SKILLS.map((skill) => (
           <Pill key={skill}>{skill}</Pill>

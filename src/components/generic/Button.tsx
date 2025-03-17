@@ -13,7 +13,8 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary: "bg-primary text-neutral-50 hover:opacity-90",
-  outline: "border border-neutral-200 text-neutral-900 hover:bg-neutral-50",
+  outline:
+    "border border-neutral-200 text-neutral-900 hover:bg-neutral-50 dark:text-neutral-50",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {

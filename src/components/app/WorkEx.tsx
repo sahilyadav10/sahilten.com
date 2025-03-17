@@ -6,7 +6,7 @@ import Section from "@/components/generic/Section";
 
 export default function WorkEx() {
   return (
-    <Section title="Work Ex" withSpacing className="relative">
+    <Section id="work-ex" title="Work Ex" withSpacing className="relative">
       {workEx.map((experience, index) => (
         <div
           key={index}

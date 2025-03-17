@@ -5,7 +5,7 @@ import CopyText from "@/components/generic/CopyText";
 
 export default function Socials() {
   return (
-    <Section title="Socials" withSpacing>
+    <Section id="socials" title="Socials" withSpacing>
       <div className="flex flex-col md:flex-row gap-3">
         <div className="basis-1/3 md:max-w-[32%] p-4 border border-neutral-200 rounded-2xl">
           <FaLinkedin
