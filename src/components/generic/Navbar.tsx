@@ -13,14 +13,15 @@ export default function Navbar() {
           <p className="font-medium text-neutral-900 dark:text-neutral-50">
             Home
           </p>
-          <p className="font-medium text-neutral-900 dark:text-neutral-50">
-            About
-          </p>
+
           <p className="font-medium text-neutral-900 dark:text-neutral-50">
             Work Ex
           </p>
           <p className="font-medium text-neutral-900 dark:text-neutral-50">
             Projects
+          </p>
+          <p className="font-medium text-neutral-900 dark:text-neutral-50">
+            Blog
           </p>
           <p className="font-medium text-neutral-900 dark:text-neutral-50">
             Contact
