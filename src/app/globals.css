@@ -7,7 +7,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 html {
-    font-family: var(--font-ptSans);
+    font-family: var(--font-openSans);
     @apply  bg-neutral-50;
 }
 

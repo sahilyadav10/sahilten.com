@@ -1,5 +1,9 @@
-// import Image from "next/image";
+import Home from "@/components/app/Home";
 
-export default function Home() {
-  return <div>Hello</div>;
+export default function App() {
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 }

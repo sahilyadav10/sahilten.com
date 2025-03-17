@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import Navbar from "@/components/generic/Navbar";
-import { PT_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata: Metadata = {
@@ -58,10 +58,10 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 };
 
-const ptSans = PT_Sans({
-  weight: "400",
+const openSans = Open_Sans({
+  weight: ["400", "700", "500", "600"],
   subsets: ["latin"],
-  variable: "--font-ptSans",
+  variable: "--font-openSans",
 });
 
 export default function RootLayout({
@@ -70,8 +70,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${ptSans.variable}`}>
-      <body className="mx-auto my-5 max-w-4xl xl:max-w-5xl">
+    <html lang="en" className={`${openSans.variable}`}>
+      <body className="w-full md:mx-auto my-5  md:max-w-4xl xl:max-w-5xl">
         <ThemeProvider>
           <Navbar />
           {children}
