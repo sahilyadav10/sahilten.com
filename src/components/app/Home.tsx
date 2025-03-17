@@ -6,6 +6,18 @@ import Button from "@/components/generic/Button";
 import moi from "../../../public/moi.png";
 
 export default function Home() {
+  const handleClick = () => {
+    window.open(
+      "https://unsplash.com/@sahilyadav10",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  };
+
+  const handleResumeClick = () => {
+    window.open("/Sahil_Yadav_Resume.pdf", "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div className="p-4 my-10 flex flex-col gap-6">
       <div className="flex flex-col md:flex-row gap-6">
@@ -24,10 +36,16 @@ export default function Home() {
             </h1>
             <p className="text-neutral-900 dark:text-neutral-50">
               Time&apos;s Person of the Year (2006). Engineer of exceptional
-              digital experiences (since 2020)
+              digital experiences (since 2020). Cat lover (since 1996). Trekker
+              extraordinaire (since 2024).
             </p>
           </div>
-          <Button>View Resume</Button>
+          <div className="flex gap-3">
+            <Button onClick={handleResumeClick}>View Resume</Button>
+            <Button variant="outline" onClick={handleClick}>
+              I&apos;m Feeling Lucky
+            </Button>
+          </div>
         </div>
       </div>
       <div className="flex justify-center items-center">
