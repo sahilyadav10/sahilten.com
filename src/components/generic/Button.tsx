@@ -12,9 +12,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles: Record<ButtonVariant, string> = {
-  primary: "bg-primary text-neutral-50 hover:opacity-90",
+  primary: "bg-primary text-neutral-50 hover:brightness-95",
   outline:
-    "border border-neutral-200 text-neutral-900 hover:bg-neutral-50 dark:text-neutral-50",
+    "border border-neutral-200 text-neutral-900 hover:bg-neutral-50 dark:text-neutral-50 hover:brightness-95 hover:dark:bg-transparent",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
@@ -40,7 +40,7 @@ export default function Button({
 
   return (
     <button
-      className={`rounded-lg flex gap-2 items-center font-medium transition-all hover:cursor-pointer hover:brightness-95
+      className={`rounded-lg flex gap-2 items-center font-medium transition-all hover:cursor-pointer
         ${variantStyles[variant]}
         ${sizeStyles[size]}
         ${fullWidth ? "w-full" : ""}

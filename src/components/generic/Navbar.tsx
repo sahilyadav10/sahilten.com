@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-      <div className="flex items-center justify-between py-3 px-4 border-b">
+      <div className="flex items-center justify-between py-3 px-4 border-b border-primary/30">
         <div className="flex items-center gap-4 md:gap-20">
           <div className="flex items-center">
             <Logo height={60} width={200} />

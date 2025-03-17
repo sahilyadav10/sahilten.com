@@ -9,7 +9,7 @@ type PillProps = {
 const baseStyles = "rounded-full px-3 py-1 w-fit";
 
 const typeStyles = {
-  default: "text-neutral-900 dark:text-neutral-50 border border-neutral-200",
+  default: "text-neutral-900 dark:text-neutral-50 border border-primary/30",
   primary: "bg-[#8C52FF] text-neutral-50",
   secondary:
     "bg-neutral-100 text-neutral-800 dark:bg-neutral-700 dark:text-neutral-200",

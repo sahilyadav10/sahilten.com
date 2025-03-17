@@ -16,7 +16,7 @@ type CardProps = {
 };
 
 const variantStyles = {
-  stat: "bg-neutral-50 border border-neutral-200",
+  stat: "bg-neutral-50 border border-primary/30",
   content: "bg-neutral-50 shadow-lg",
 };
 
@@ -36,12 +36,7 @@ export default function Card({
 
   return (
     <div
-      className={`group rounded-2xl flex flex-col ${variantStyles[variant]} ${
-        href ? "cursor-pointer" : ""
-      } ${className}`}
-      onClick={href ? handleClick : undefined}
-      role={href ? "link" : undefined}
-      tabIndex={href ? 0 : undefined}
+      className={`rounded-2xl flex flex-col ${variantStyles[variant]} ${className}`}
     >
       {image && (
         <div className="w-full h-48 min-h-48 relative overflow-hidden rounded-t-2xl">
@@ -49,7 +44,7 @@ export default function Card({
             src={image.src}
             alt={image.alt}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-120"
+            className="object-cover transition-transform duration-500 hover:scale-120"
           />
         </div>
       )}
@@ -60,14 +55,19 @@ export default function Card({
           {subheading && <span className="text-neutral-500">{subheading}</span>}
         </div>
       ) : (
-        <div className="pt-2 h-full flex gap-2 flex-col justify-between px-4 pb-4 hover:border-x hover:border-b hover:border-primary hover:rounded-b-2xl hover:border-t-none">
+        <div className="pt-2 h-full flex gap-2 flex-col justify-between px-4 pb-4">
           <div>
             <h3 className="font-semibold text-neutral-900">{heading}</h3>
             {subheading && (
               <p className="text-neutral-600 text-sm">{subheading}</p>
             )}
           </div>
-          <Button className="justify-center" size="sm">
+          <Button
+            className="justify-center"
+            size="sm"
+            onClick={href ? handleClick : undefined}
+            tabIndex={href ? 0 : undefined}
+          >
             View <HiArrowRight />
           </Button>
         </div>

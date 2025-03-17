@@ -12,9 +12,9 @@ export default function WorkEx() {
           key={index}
           className="flex pb-10 ml-0 md:ml-4 last:pb-0 last:bg-neutral-50 dark:last:bg-theme-dark"
         >
-          <div className="-z-1 absolute left-[36px] md:left-[52px] top-20 h-[90%] w-[1px] bg-neutral-600" />
+          <div className="-z-1 absolute left-[36px] md:left-[52px] top-20 h-[90%] w-[1px] bg-primary/30" />
           <div className="flex gap-2 items-start">
-            <div className="min-w-10 h-10 overflow-clip flex items-center justify-center bg-neutral-100 border-2 border-neutral-700 rounded-full">
+            <div className="min-w-10 h-10 overflow-clip flex items-center justify-center bg-neutral-100 border-2 border-primary/40 rounded-full">
               {experience?.logo ? (
                 <Image
                   src={`/${experience.logo}`}

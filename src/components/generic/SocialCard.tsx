@@ -15,7 +15,7 @@ export default function SocialCard({ social }: SocialCardProps) {
 
   return (
     <div
-      className="basis-1/3 md:max-w-[32%] p-4 border border-neutral-200 rounded-2xl transition-all duration-200 hover:border-primary cursor-pointer"
+      className="basis-1/3 md:max-w-[32%] p-4 border border-primary/30 rounded-2xl transition-all duration-200 hover:border-primary cursor-pointer"
       role="button"
       onClick={handleClick}
       tabIndex={0}
