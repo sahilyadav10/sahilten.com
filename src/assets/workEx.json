@@ -1,0 +1,115 @@
+[
+  {
+    "company": "Thera, YC S22",
+    "duration": "Mar 2023 - Mar 2025",
+    "jobTitle": "Software Engineer ",
+    "logo": "thera.png",
+    "accomplishment": [
+      [
+        {
+          "text": "Conducted audits and implemented performance improvements. Advised backend team on implementing gzip compression in APIs,",
+          "isHightlight": false
+        },
+        {
+          "text": " reducing payload size by up to 20x ",
+          "isHightlight": true
+        },
+        {
+          "text": ", leading to significantly improved web app load times.",
+          "isHightlight": false
+        }
+      ],
+      "Owned and streamlined critical workflows, including invoice review, payment processing, and attachment of payment methods, ensuring efficiency and accuracy in financial operations, which consistently handled hundreds of thousands of dollars in monthly payments.",
+      "Collaborated within the team to enhance the frontend of the application, implementing technical improvements that supported the company's growth trajectory, which saw a threefold increase in scale."
+    ]
+  },
+  {
+    "company": "oneIsToX, YC S21",
+    "duration": "Aug 2022 - Jan 2023",
+    "jobTitle": "Software Engineer",
+    "logo": "novatr.png",
+    "accomplishment": [
+      "Collaborated with the frontend team to improve existing coding practices and processes.",
+      "Setup AWS Amplify to integrate a third party CMS with the existing product to improve existing content workflows",
+      "Worked on revamping critical systems to improve user journey and user retention rate.",
+      [
+        {
+          "text": "Improved website performance",
+          "isHightlight": false
+        },
+        {
+          "text": " by 100% ",
+          "isHightlight": true
+        },
+        {
+          "text": "on mobile.",
+          "isHightlight": false
+        }
+      ]
+    ]
+  },
+  {
+    "company": "Perceptiviti, Google LPA Startup",
+    "jobTitle": "Sr. Software Engineer",
+    "duration": "Feb 2021 - Jul 2022",
+    "logo": "perceptiviti.png",
+    "accomplishment": [
+      "Managed all frontend operations for the company, including designing, implementing, deploying and maintaining multiple products",
+      [
+        {
+          "text": "Migrated multiple products from SSR in Django to CSR in ReactJs, thereby ",
+          "isHightlight": false
+        },
+        {
+          "text": "improving loading performance by upto 200%.",
+          "isHightlight": true
+        }
+      ],
+      [
+        {
+          "text": "Deployed products on AWS CloudFront to act as a CDN and a reverse proxy to improve loading performance, availability and ",
+          "isHightlight": false
+        },
+        {
+          "text": " reduce deployment cost by more than 10 times.",
+          "isHightlight": true
+        }
+      ],
+      [
+        {
+          "text": "Created hybrid webapp with ReactJS CSR, Django Templates SSR and configured NGINX to serve the same, also introduced gzip to the existing configurations to",
+          "isHightlight": false
+        },
+        {
+          "text": " reduce file sizes by upto 3 times.",
+          "isHightlight": true
+        }
+      ],
+      "Added multiple frontend and backend features to multiple products.",
+      "Improved caching by improving backend handling of static resources."
+    ]
+  },
+  {
+    "company": "SheIsBeaut",
+    "jobTitle": "Software Engineer",
+    "duration": "Jun 2020 - Jan 2021",
+    "accomplishment": [
+      "Created a static site to display the product catalogue",
+      [
+        {
+          "text": "Used a third-party low-code tool to handle",
+          "isHightlight": false
+        },
+        {
+          "text": " 20% month-on-month ",
+          "isHightlight": true
+        },
+        {
+          "text": "increase in orders",
+          "isHightlight": false
+        }
+      ],
+      "Worked on creating an in-house web-app to handle various CRUD operations"
+    ]
+  }
+]

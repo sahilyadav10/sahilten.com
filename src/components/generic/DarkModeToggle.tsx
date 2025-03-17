@@ -21,7 +21,7 @@ const DarkModeToggle = ({ className = "w-10 h-10" }) => {
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
             fill="currentColor"
-            className="text-gray-100 w-full h-full transition-all duration-700"
+            className="text-neutral-100 w-full h-full transition-all duration-700"
           >
             <path d="M14 2a10 10 0 1 0 8 16 7 7 0 1 1-8-16z" />
           </svg>

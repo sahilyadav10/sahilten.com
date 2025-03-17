@@ -14,7 +14,7 @@ type CardProps = {
 };
 
 const variantStyles = {
-  stat: "bg-gray-50 border border-gray-200",
+  stat: "bg-neutral-50 border border-neutral-200",
   content: "bg-transparent",
 };
 

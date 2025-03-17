@@ -2,6 +2,7 @@
 
 @theme {
     --color-theme-dark: #121A21;
+    --color-primary: #8C52FF;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));

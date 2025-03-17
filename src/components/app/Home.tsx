@@ -48,18 +48,18 @@ export default function Home() {
         <h2 className="text-neutral-900 dark:text-neutral-50 font-bold text-lg">
           Skills
         </h2>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <Pill>HTML5</Pill>
           <Pill>CSS3</Pill>
           <Pill>JavaScript (ES6+)</Pill>
           <Pill>React.js</Pill>
           <Pill>Next.js</Pill>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <Pill>Node.js (Express)</Pill>
           <Pill>Python (Django)</Pill>
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <Pill>AWS EC2</Pill>
           <Pill>AWS CloudFront</Pill>
           <Pill>AWS S3</Pill>
