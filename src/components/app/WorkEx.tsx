@@ -36,7 +36,7 @@ export default function WorkEx() {
               <p className="text-neutral-600 dark:text-neutral-400 text-sm">
                 {experience.jobTitle}, {experience.duration}
               </p>
-              <ul>
+              <ul className="mt-2">
                 {experience.accomplishment.map((accomplishment, index) => {
                   if (Array.isArray(accomplishment)) {
                     return (
