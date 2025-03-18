@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import posthog from "posthog-js";
 
 import Card from "@/components/generic/Card";
 import Button from "@/components/generic/Button";
@@ -7,6 +8,7 @@ import moi from "../../../public/moi.webp";
 
 export default function Home() {
   const handleClick = () => {
+    posthog.capture("Unsplash", { property: "Unsplash Clicked" });
     window.open(
       "https://unsplash.com/@sahilyadav10",
       "_blank",
@@ -15,6 +17,7 @@ export default function Home() {
   };
 
   const handleResumeClick = () => {
+    posthog.capture("Resume", { property: "Resume Clicked" });
     window.open("/Sahil_Yadav_Resume.pdf", "_blank", "noopener,noreferrer");
   };
 

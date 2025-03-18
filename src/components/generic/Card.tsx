@@ -1,6 +1,8 @@
 import Image from "next/image";
-import Button from "@/components/generic/Button";
+import posthog from "posthog-js";
 import { HiArrowRight } from "react-icons/hi";
+
+import Button from "@/components/generic/Button";
 
 type CardVariant = "stat" | "content";
 type CardProps = {
@@ -29,6 +31,7 @@ export default function Card({
   href,
 }: CardProps) {
   const handleClick = () => {
+    posthog.capture("Project", { property: `${heading} Clicked` });
     if (href) {
       window.open(href, "_blank", "noopener,noreferrer");
     }

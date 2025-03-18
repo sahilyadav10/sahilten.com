@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/generic/Navbar";
 import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { PostHogProvider } from "@/context/PosthogContext";
 
 export const metadata: Metadata = {
   title: `Software Engineer | Sahil | ${new Date().getFullYear()}`,
@@ -72,10 +73,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${openSans.variable}`}>
       <body className="w-full md:mx-auto my-5 md:max-w-4xl xl:max-w-5xl pt-16">
-        <ThemeProvider>
-          <Navbar />
-          {children}
-        </ThemeProvider>
+        <PostHogProvider>
+          <ThemeProvider>
+            <Navbar />
+            {children}
+          </ThemeProvider>
+        </PostHogProvider>
         <script
           src="//code.tidio.co/4l4pmifrvyelxsyxtdnctqib5o8vcygr.js"
           async
