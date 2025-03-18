@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Card from "@/components/generic/Card";
 import Button from "@/components/generic/Button";
-import moi from "../../../public/moi.png";
+import moi from "../../../public/moi.webp";
 
 export default function Home() {
   const handleClick = () => {
@@ -26,6 +26,8 @@ export default function Home() {
             src={moi}
             alt="A picture of Sahil Yadav"
             className="rounded-2xl"
+            priority={true}
+            placeholder="blur"
           />
         </div>
         <div className="basis-1/2 flex items-start flex-col justify-center gap-6">
