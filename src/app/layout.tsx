@@ -4,7 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/generic/Navbar";
 import { Open_Sans } from "next/font/google";
 import { ThemeProvider } from "@/context/ThemeContext";
-import { PostHogProvider } from "@/context/PosthogContext";
+import { PostHogProvider } from "@/app/PosthogContext";
 
 export const metadata: Metadata = {
   title: `Software Engineer | Sahil | ${new Date().getFullYear()}`,
