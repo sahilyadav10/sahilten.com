@@ -15,7 +15,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode
+  const [isDarkMode, setIsDarkMode] = useState(false); // Default to lgight mode
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {

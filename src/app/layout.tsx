@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${openSans.variable}`}>
-      <body className="w-full md:mx-auto my-5  md:max-w-4xl xl:max-w-5xl">
+      <body className="w-full md:mx-auto my-5 md:max-w-4xl xl:max-w-5xl pt-16">
         <ThemeProvider>
           <Navbar />
           {children}

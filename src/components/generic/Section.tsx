@@ -23,7 +23,7 @@ export default function Section({
       } ${className}`}
       id={id}
     >
-      <h2 className="text-neutral-900 dark:text-neutral-50 font-bold text-lg">
+      <h2 className="text-neutral-900 dark:text-neutral-50 font-bold text-lg mb-2">
         {title} <Underline width={100} />
       </h2>
       {children}

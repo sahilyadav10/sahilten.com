@@ -1,6 +1,6 @@
 "use client";
 import Section from "@/components/generic/Section";
-import Card from "../generic/Card";
+import Card from "@/components/generic/Card";
 
 export default function Projects() {
   return (

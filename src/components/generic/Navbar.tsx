@@ -1,11 +1,14 @@
 "use client";
 import { useState } from "react";
-import DarkModeToggle from "./DarkModeToggle";
+
+import DarkModeToggle from "@/components/generic/DarkModeToggle";
 import Logo from "@/components/icons/Logo";
-import HamburgerMenu from "./HamburgerMenu";
+import HamburgerMenu from "@/components/generic/HamburgerMenu";
+import Underline from "@/components/icons/Underline";
+import useNavigation from "@/hooks/useNavigation";
 
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#home" },
   { label: "Work Ex", href: "/#work-ex" },
   { label: "Projects", href: "/#projects" },
   // { label: "Blog", href: "/#blog" },
@@ -14,33 +17,15 @@ const navItems = [
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const handleNavClick = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    href: string
-  ) => {
-    e.preventDefault();
-
-    // If it's the home link with no hash, just scroll to top
-    if (href === "/") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      return;
-    }
-
-    // Extract the id from href
-    const id = href.split("#")[1];
-    const element = document.getElementById(id);
-
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      // Update URL without triggering scroll
-      window.history.pushState({}, "", href);
-    }
-  };
+  const { activeSection, handleNavClick } = useNavigation(navItems);
 
   return (
-    <div className="relative">
-      <div className="flex items-center justify-between py-3 px-4 border-b border-primary/30">
+    <div className="fixed top-0 left-0 right-0 bg-neutral-50 dark:bg-theme-dark z-50 w-full pb-2">
+      <div className="gradient-animation text-sm font-medium text-neutral-50 text-center py-1">
+        Hire me, I&apos;m independent like a cat but still need occasional head
+        pats. 🐾
+      </div>
+      <div className="flex items-center justify-between py-3 px-4 border-b border-primary/30 max-w-7xl mx-auto">
         <div className="flex items-center gap-4 md:gap-20">
           <div className="flex items-center">
             <Logo height={60} width={200} />
@@ -52,11 +37,16 @@ export default function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className="font-medium text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
+                className={`font-medium transition-colors ${
+                  activeSection === item.href
+                    ? "text-primary"
+                    : "text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-300"
+                }`}
                 role="button"
                 tabIndex={0}
               >
                 {item.label}
+                {activeSection === item.href && <Underline width={40} />}
               </a>
             ))}
           </div>
@@ -83,7 +73,11 @@ export default function Navbar() {
               <a
                 key={item.label}
                 href={item.href}
-                className="font-medium text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-300 transition-colors"
+                className={`font-medium transition-colors ${
+                  activeSection === item.href
+                    ? "text-primary"
+                    : "text-neutral-900 dark:text-neutral-50 hover:text-neutral-700 dark:hover:text-neutral-300"
+                }`}
                 onClick={(e) => {
                   handleNavClick(e, item.href);
                   setIsMobileMenuOpen(false);
@@ -91,7 +85,8 @@ export default function Navbar() {
                 role="button"
                 tabIndex={0}
               >
-                {item.label}
+                {item.label}{" "}
+                {activeSection === item.href && <Underline width={40} />}
               </a>
             ))}
           </div>

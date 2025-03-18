@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <div className="p-4 my-10 flex flex-col gap-6">
+    <div className="p-4 my-10 flex flex-col gap-6" id={"home"}>
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:basis-1/2">
           <Image
