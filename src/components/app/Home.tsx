@@ -46,7 +46,13 @@ export default function Home() {
             </p>
           </div>
           <div className="flex gap-3">
-            <Button onClick={handleResumeClick}>View Resume</Button>
+            <Button
+              onClick={handleResumeClick}
+              className="relative flex items-center justify-center"
+            >
+              <span className="-z-1 absolute h-[36px] w-[80px] duration-75 animate-ping  bg-primary rounded-lg opacity-95"></span>
+              View Resume{" "}
+            </Button>
             <Button variant="outline" onClick={handleClick}>
               I&apos;m Feeling Lucky
             </Button>
