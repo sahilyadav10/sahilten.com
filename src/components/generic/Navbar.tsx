@@ -22,8 +22,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 left-0 right-0 bg-neutral-50 dark:bg-theme-dark z-50 w-full pb-2">
       <div className="gradient-animation text-sm font-medium text-neutral-50 text-center py-1">
-        Hire me, I&apos;m independent like a cat but still need occasional head
-        pats. 🐾
+        Hire me, I&apos;m as strategic as a cat stalking a laser pointer 😼
       </div>
       <div className="flex items-center justify-between py-3 px-4 border-b border-primary/30 max-w-7xl mx-auto">
         <div className="flex items-center gap-4 md:gap-20">
