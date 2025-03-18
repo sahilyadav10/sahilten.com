@@ -76,6 +76,10 @@ export default function RootLayout({
           <Navbar />
           {children}
         </ThemeProvider>
+        <script
+          src="//code.tidio.co/4l4pmifrvyelxsyxtdnctqib5o8vcygr.js"
+          async
+        ></script>
       </body>
     </html>
   );
