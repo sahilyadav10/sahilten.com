@@ -5,8 +5,11 @@ import posthog from "posthog-js";
 import Card from "@/components/generic/Card";
 import Button from "@/components/generic/Button";
 import moi from "../../../public/moi.webp";
+import workEx from "@/assets/workEx.json";
 
 export default function Home() {
+  const yearsSince2020 = Math.ceil(new Date().getFullYear() - 2020);
+
   const handleClick = () => {
     posthog.capture("Unsplash", { property: "Unsplash Clicked" });
     window.open(
@@ -61,8 +64,16 @@ export default function Home() {
       </div>
       <div className="flex justify-center items-center">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-          <Card variant="stat" heading="5" subheading="Years of experience" />
-          <Card variant="stat" heading="3" subheading="Companies worked" />
+          <Card
+            variant="stat"
+            heading={String(yearsSince2020)}
+            subheading="Years of experience"
+          />
+          <Card
+            variant="stat"
+            heading={String(workEx?.length)}
+            subheading="Companies worked"
+          />
           <Card
             variant="stat"
             heading="0"
